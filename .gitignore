@@ -1,0 +1,9 @@
+#exclude all things beginning with a dot but these
+.*
+!.gitignore
+!.vscode
+!.devcontainer
+
+#exclude compiled python modules
+__pycache__/
+*.pyc
