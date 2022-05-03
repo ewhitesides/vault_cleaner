@@ -8,7 +8,7 @@
 
 the use case for this code was password rotation, where machines would rotate their local passwords on a daily/weekly basis.  over time, if the path is no longer being written to, it is assumed that the machine no longer exists, and so this code creates a sort of 'recycle bin' system to prune old data.
 
-this code was used in production with Vault v1.6.5, and should work with newer versions as well, but it has been verified.
+this code was used in production with Vault v1.6.5, and should work with newer versions as well, but it has not been verified.
 
 ## development setup
 
