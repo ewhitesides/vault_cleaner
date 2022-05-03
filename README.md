@@ -2,7 +2,9 @@
 
 ## Overview
 
-code that moves secrets from a kv2 mount VAULT_SOURCE_MOUNT older than VAULT_SOURCE_AGE days to another kv2 mount (VAULT_DESTINATION_MOUNT).  after VAULT_DESTINATION_AGE days, secrets are deleted from VAULT_DESTINATION_MOUNT.
+- moves secrets from a kv2 mount VAULT_SOURCE_MOUNT older than VAULT_SOURCE_AGE days to another kv2 mount (VAULT_DESTINATION_MOUNT).
+
+- after VAULT_DESTINATION_AGE days, secrets are deleted from VAULT_DESTINATION_MOUNT.
 
 the use case for this code was password rotation, where machines would rotate their local passwords on a daily/weekly basis.  over time, if the path is no longer being written to, it is assumed that the machine no longer exists, and so this code creates a sort of 'recycle bin' system to prune old data.
 
